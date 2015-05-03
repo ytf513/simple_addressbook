@@ -1,0 +1,68 @@
+.ipt-text{
+    width:45%;
+    height:20px;
+    font-size:15px;
+    border:1px solid #BABEBF;
+    margin:3px;
+    padding:2px;
+}
+
+.ipt-button{
+    width:10%;
+    height:25px;
+    background:#4169E1;
+    font-size:15px;
+    font-weight:bold;
+    color:white;
+    font-family:arial,"Microsoft YaHei",Sans-Serif;
+    border:0;
+    cursor:pointer;
+    margin:3px;
+    padding:2px;
+}
+
+.p-text{
+    font-size:13px;
+    margin:3px;
+    color:#696969;
+}
+
+table{
+    width:60%;
+    left:10px;
+    border:1px solid #4169E1;
+    border-collapse:collapse;//表格边框合并
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    table-layout:fixed;
+}
+
+th,td{
+    font-size:1em;
+    border:1px solid #4169E1;
+    padding:3px 7px 2px 7px;
+}
+
+th{
+    font-size:1.1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#418dd8;
+    color:#ffffff;
+    text-align:center;
+}
+
+
+
+.td-1{
+    width:20%;
+}
+
+.td-2{
+    width:30%;
+}
+
+.td-3{
+    width:40%;
+}
+

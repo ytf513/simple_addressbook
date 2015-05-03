@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<title>{{title}}</title>
+        <link rel="stylesheet" href="{{ static_url("stylesheet.css") }}" type="text/css"/>
+        <link rel="stylesheet" href="{{ static_url("lib/jquery-ui.min.css") }}" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type='text/javascript' src='{{ static_url("lib/jquery.js") }}'></script>
+        <script type='text/javascript' src='{{ static_url("lib/jquery-ui.min.js") }}'></script>
+        <script type='text/javascript' src='{{ static_url("script.js") }}'></script>
+	</head>
+	<body>
+		<form id='searchform' action='/s' method='get'>
+		<input class='ipt-text' type='text' name='search' placeholder='请输入工号、姓名、部门或电话等关键字'/>
+		<input class='ipt-button' type='submit' value='搜索一下'/>
+	</form>
+    {% if len(result)==0%}
+        <p class='p-text'>没有找到结果!</p>
+    {%else%}
+        <p class='p-text'>找到约{{len(result)}}条记录。</p>
+		<table>
+            <tr>
+            <th class='td-1'>工号</th><th class='td-2'>姓名</th><th class='td-3'>电话</th>
+            </tr>
+			{%for i in result%}
+            <tr>
+			<td class='td-1'>{{i.id}}</td>
+			<td class='td-2'>{{i.name}}</td>
+			<td class='td-3'>{{i.phone}}</td>
+            </tr>
+			{%end%}
+		</table>
+    {% end %}
+	</body>
+</html>
